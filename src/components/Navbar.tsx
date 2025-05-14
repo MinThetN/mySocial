@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
+import DesktopNavbar from './DesktopNavbar'
+import MobileNavbar from './MobileNavbar'
 
 function Navbar() {
   return (
@@ -11,7 +13,10 @@ function Navbar() {
                     <Link href={''} className='text-xl font-bold text-primary font-mono tracking-wider'>
                         Social Media
                     </Link>
+                    
                 </div>
+                <DesktopNavbar/>
+                <MobileNavbar />
              </div>
         </div>
     </nav>
