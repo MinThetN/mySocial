@@ -4,10 +4,10 @@ import { useUser } from '@clerk/nextjs';
 import React, { useState } from 'react'
 import toast from 'react-hot-toast';
 import { Card, CardContent } from './ui/card';
-import { Link } from 'lucide-react';
 import { Avatar, AvatarImage } from './ui/avatar';
 import {formatDistanceToNow} from 'date-fns';
 import { DeleteAlertDialog } from './DeleteAlertDialog';
+import Link from 'next/link';
 
 type Posts = Awaited<ReturnType<typeof getPosts>>
 type Post = Posts[number]
@@ -76,7 +76,8 @@ function PostCard({post, dbUserId} : { post:Post; dbUserId:string | null }) {
                 <div className='flex space-x-3 sm:space-x-4'>
                     <Link href={`/profile/${post.author.username}`}>
                         <Avatar className="size-8 sm:w-10 sm:h-10">
-                            <AvatarImage src={post.author.image ?? "/avatar.png"} />
+                            {/* <AvatarImage src={post.author.image ?? "/avatar.png"} /> */}
+                            <AvatarImage src={post.author.image ? post.author.image : "/avatar.png"} />
                         </Avatar>
                     </Link>
 
