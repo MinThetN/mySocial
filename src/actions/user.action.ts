@@ -60,7 +60,7 @@ export async function getDbUserId(){
     if(!clerkId) return null;
 
     const user = await getUserByClerkId(clerkId);
-    if(!user) throw new Error("User not found");
+    if(!user) return null;
 
     return user.id;
 }
