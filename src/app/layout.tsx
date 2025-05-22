@@ -19,7 +19,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Social App",
+  title: "M Social",
   description: "A modern social media application built with Next.js",
 };
 
