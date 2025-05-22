@@ -97,8 +97,8 @@ function PostCard({post, dbUserId} : { post:Post; dbUserId:string | null }) {
                             >
                                 {post.author.name}
                             </Link>
-                            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                                <Link href={`/profile/${post.author.username}`}>@{post.author.username}</Link>
+                            <div className="flex text-gray-800 dark:text-gray-300 items-center space-x-2 text-sm text-muted-foreground">
+                                {/* <Link href={`/profile/${post.author.username}`}>@{post.author.username}</Link> */}
                                 <span>•</span>
                                 <span>{formatDistanceToNow(new Date(post.createdAt))} ago</span>
                             </div>
@@ -111,7 +111,7 @@ function PostCard({post, dbUserId} : { post:Post; dbUserId:string | null }) {
                               <DeleteAlertDialog isDeleting={isDeleting} onDelete={handleDeletePost} />
                             )}
                         </div>
-                        <p className="mt-2 text-sm text-foreground break-words">{post.content}</p>
+                        <p className="mt-2 text-md text-foreground break-words">{post.content}</p>
                     </div>
 
                 </div>

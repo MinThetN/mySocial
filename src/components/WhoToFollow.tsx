@@ -14,7 +14,7 @@ async function WhoToFollow() {
     <Card>
         <CardHeader>
             <CardTitle>
-                who to follow
+                Who To Follow
             </CardTitle>
         </CardHeader>
         <CardContent>
@@ -35,7 +35,7 @@ async function WhoToFollow() {
                     <p className="text-muted-foreground">{user._count.followers} followers</p>
                     </div>
                 </div>
-                <FollowButton userId={user.id} />
+                    <FollowButton userId={user.id} />
                 </div>
             ))}
             </div>

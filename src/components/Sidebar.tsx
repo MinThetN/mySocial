@@ -20,25 +20,27 @@ async function Sidebar() {
     // Implement authenticated sidebar
     console.log(user);
   return (
-    <div className='sticky top-20'>
-      <Card>
+    <div className='sticky top-20 cursor-pointer'>
+      <Card className="backdrop-blur-sm bg-opacity-50 hover:bg-opacity-70 transition-all duration-300">
         <CardContent className="pt-6">
           <div className="flex flex-col items-center text-center">
             <Link
               href={`/profile/${user.username}`}
-              className="flex flex-col items-center justify-center"
+              className="flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
             >
-              <Avatar className="w-20 h-20 border-2 ">
+              <Avatar className="w-20 h-20 border-2 hover:shadow-[0_0_30px_rgba(99,102,241,0.8)] transition-shadow duration-300">
                 <AvatarImage src={user.image || "/avatar.png"} />
               </Avatar>
 
               <div className="mt-4 space-y-1">
-                <h3 className="font-semibold">{user.name}</h3>
+                <h3 className="font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
+                  {user.name}
+                </h3>
                 <p className="text-sm text-muted-foreground">{user.username}</p>
               </div>
             </Link>
 
-            {user.bio && <p className="mt-3 text-sm text-muted-foreground">{user.bio}</p>}
+            {user.bio && <p className="mt-3 text-sm text-muted-foreground text-gray-800">{user.bio}</p>}
 
             <div className="w-full">
               <Separator className="my-4" />

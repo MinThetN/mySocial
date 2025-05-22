@@ -115,13 +115,16 @@ function ProfilePageClient({isFollowing:initialIsFollowing, likedPosts, user, po
                         <Button className="w-full mt-4">Follow</Button>
                       </SignInButton>
                     ) : isOwnProfile ? (
-                      <Button className="w-full mt-4" onClick={() => setShowEditDialog(true)}>
+                      <Button className="w-full mt-4 bg-gradient-to-r from-sky-600 to-cyan-500 hover:from-cyan-700 hover:to-sky-600 
+                      dark:bg-gradient-to-r dark:from-sky-600 dark:to-cyan-400 dark:hover:from-cyan-400 dark:hover:to-sky-600" 
+                      onClick={() => setShowEditDialog(true)}>
                         <EditIcon className="size-4 mr-2" />
                         Edit Profile
                       </Button>
                     ) : (
                       <Button
-                        className="w-full mt-4"
+                        className="w-full mt-4 bg-gradient-to-r from-sky-600 to-cyan-500 hover:from-cyan-700 hover:to-sky-600 
+                        dark:bg-gradient-to-r dark:from-sky-600 dark:to-cyan-400 dark:hover:from-cyan-400 dark:hover:to-sky-600"
                         onClick={handleFollow}
                         disabled={isUpdatingFollow}
                         variant={isFollowing ? "outline" : "default"}
