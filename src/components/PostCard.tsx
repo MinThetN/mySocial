@@ -17,10 +17,6 @@ type Post = Posts[number]
 
 function PostCard({post, dbUserId} : { post:Post; dbUserId:string | null }) {
 
-  console.log('Current post author ID:', post.author.id);
-  console.log('Current dbUserId:', dbUserId);
-  console.log('Are IDs equal?:', dbUserId === post.author.id);
-
   const isAuthor = dbUserId !== null && post.author.id === dbUserId;
 
     const { user } = useUser();
@@ -121,7 +117,7 @@ function PostCard({post, dbUserId} : { post:Post; dbUserId:string | null }) {
                 </div>
                 {/* Post Image */}
                 {post.image && (
-                  <div className="rounded-lg overflow-hidden">
+                  <div className="rounded-2xl overflow-hidden">
                     <img src={post.image} alt="Post content" className="w-full h-auto object-cover" />
                   </div>
                 )}

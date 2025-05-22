@@ -48,8 +48,8 @@ function CreatePost() {
                         <AvatarImage src={user?.imageUrl || "/avatar.png"} />
                     </Avatar>
                     <Textarea
-                        placeholder='What is on your mind?'
-                        className = "min-h-[100px] resize-none border-none focus-visible:ring-0 p-0 text-base"
+                        placeholder='Share your thoughts...'
+                        className = "min-h-auto resize-none border-none focus-visible:ring-0 p-2 text-base"
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                         disabled={isPosting}
@@ -77,7 +77,9 @@ function CreatePost() {
                         type="button"
                         variant="ghost"
                         size="sm"
-                        className="text-muted-foreground hover:text-primary"
+                        className="text-muted-foreground hover:text-primary hover:text-white hover:bg-gradient-to-r
+                        hover:from-cyan-600 hover:to-blue-600
+                        dark:hover:text-white dark:hover:bg-gradient-to-r dark:hover:from-cyan-600 dark:hover:to-indigo-600"
                         onClick={() => setShowImageUpload(!showImageUpload)}
                         disabled={isPosting}
                     >
@@ -86,7 +88,7 @@ function CreatePost() {
                     </Button>
                     </div>
                     <Button
-                    className="flex items-center"
+                    className="flex items-center rounded-full" // Post button styles
                     onClick={handleSubmit}
                     disabled={(!content.trim() && !imageUrl) || isPosting}
                     >
@@ -97,7 +99,7 @@ function CreatePost() {
                         </>
                     ) : (
                         <>
-                        <SendIcon className="size-4 mr-2" />
+                        <SendIcon className="size-4 mr-2 " />
                         Post
                         </>
                     )}
