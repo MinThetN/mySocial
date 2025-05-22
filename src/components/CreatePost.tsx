@@ -43,7 +43,7 @@ function CreatePost() {
     <Card className='mb-6'>
         <CardContent className='pt-6'>
             <div className='space-y-4'>
-                <div className='flex space-x-4'>
+                <div className='flex space-x-2'>
                     <Avatar className='w-10 h-10'>
                         <AvatarImage src={user?.imageUrl || "/avatar.png"} />
                     </Avatar>
