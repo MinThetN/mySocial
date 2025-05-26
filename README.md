@@ -14,3 +14,7 @@ A modern social networking application built with Next.js , TypeScript, and Pris
 - Backend: Next.js API routes, Prisma ORM
 - Database: Configured via Prisma
 - File Uploads: uploadthing
+
+
+https://github.com/user-attachments/assets/8937b1fe-cbb4-4bdf-a477-33c6108116d7
+
