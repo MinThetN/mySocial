@@ -28,11 +28,11 @@ async function WhoToFollow() {
                             <AvatarImage src={user.image ?? "/avatar.png"} />
                         </Avatar>
                         </Link>
-                        <div className="text-xs">
-                        <Link href={`/profile/${user.username}`} className="font-medium cursor-pointer">
+                        <div className="text-xs min-w-0 flex-1">
+                        <Link href={`/profile/${user.username}`} className="font-medium cursor-pointer break-words block max-w-[120px]">
                             {user.name}
                         </Link>
-                        <p className="text-muted-foreground max-w-[100px] flex-1">@{user.username}</p>
+                        <p className="text-muted-foreground max-w-[120px] truncate">@{user.username}</p>
                         <p className="text-muted-foreground">{user._count.followers} followers</p>
                         </div>
                     </div>

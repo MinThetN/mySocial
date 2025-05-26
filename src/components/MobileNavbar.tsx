@@ -8,6 +8,7 @@ import {
   MoonIcon,
   SunIcon,
   UserIcon,
+  UserPlusIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -60,6 +61,12 @@ function MobileNavbar() {
                   <Link href="/notifications">
                     <BellIcon className="w-4 h-4" />
                     Notifications
+                  </Link>
+                </Button>
+                <Button variant="ghost" className="flex items-center gap-3 justify-start" asChild>
+                  <Link href="/whotofollow">
+                    <UserPlusIcon className="w-4 h-4" />
+                    Who to Follow
                   </Link>
                 </Button>
                 <Button variant="ghost" className="flex items-center gap-3 justify-start" asChild>
