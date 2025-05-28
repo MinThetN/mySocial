@@ -10,7 +10,7 @@ A modern social networking application built with Next.js , TypeScript, and Pris
 - Image uploads for avatars and posts
 
  ## Tech Stack
-- Frontend: Next.js, React, TypeScript, Tailwind CSS
+- Frontend: Next.js, React, TypeScript, Tailwind CSS, Shedcn Ui,
 - Backend: Next.js API routes, Prisma ORM
 - Database: Configured via Prisma
 - File Uploads: uploadthing
