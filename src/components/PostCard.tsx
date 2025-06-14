@@ -175,9 +175,9 @@ function PostCard({post, dbUserId} : { post:Post; dbUserId:string | null }) {
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                             <span className="font-medium text-sm">{comment.author.name}</span>
-                            <span className="text-sm text-muted-foreground">
+                            {/* <span className="text-sm text-muted-foreground">
                               @{comment.author.username}
-                            </span>
+                            </span> */}
                             <span className="text-sm text-muted-foreground">·</span>
                             <span className="text-sm text-muted-foreground">
                               {formatDistanceToNow(new Date(comment.createdAt))} ago

@@ -95,12 +95,12 @@ function NotificationsPage() {
                           (notification.type === "LIKE" || notification.type === "COMMENT") && (
                             <div className="pl-6 space-y-2">
                               <div className="text-sm text-muted-foreground rounded-md p-2 bg-muted/30 mt-2">
-                                <p>{notification.post.content}</p>
+                                {/* <p>{notification.post.content}</p> */}
                                 {notification.post.image && (
                                   <img
                                     src={notification.post.image}
                                     alt="Post content"
-                                    className="mt-2 rounded-md w-full max-w-[200px] h-auto object-cover"
+                                    className="mt-2 rounded-md w-full max-w-[64px] h-auto object-cover"
                                   />
                                 )}
                               </div>
