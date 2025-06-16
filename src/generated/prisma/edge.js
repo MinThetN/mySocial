@@ -185,7 +185,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/minthetnaung/Desktop/social_app/src/generated/prisma",
+      "value": "/Users/minthetnaung/Desktop/mySocial/src/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -199,7 +199,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/Users/minthetnaung/Desktop/social_app/prisma/schema.prisma",
+    "sourceFilePath": "/Users/minthetnaung/Desktop/mySocial/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

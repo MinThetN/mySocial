@@ -5,9 +5,19 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { SignInButton, UserButton, useUser } from "@clerk/nextjs";
 import { ModeToggle } from "./ModeToggle";
+import { useEffect } from "react";
+import { syncUser } from "@/actions/user.action";
 
 function DesktopNavbar() {
   const { user, isSignedIn } = useUser();
+
+  // Add this effect to sync user when they sign in
+  useEffect(() => {
+    if (isSignedIn) {
+      // Sync the user with the database
+      syncUser();
+    }
+  }, [isSignedIn]);
 
   return (
     <div className="hidden md:flex items-center space-x-4">
